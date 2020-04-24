@@ -64,7 +64,7 @@ spec:
         - name: DRIVER_PATH
           value: /var/drivers/nvidia
         - name: PRE_INSTALLED_NV_DRIVER_PATH
-          value: /usr/local/nvidia # the path user has pre-installed nvidia driver
+          value: /var/drivers/nvidia # the path user has pre-installed nvidia driver
         - name: POD_IP
           valueFrom:
             fieldRef:
@@ -114,4 +114,4 @@ spec:
           path: /etc/docker
       - name: pre-install-nv-driver-path
         hostPath:
-          path: /usr/local/nvidia # TODO make it argument
+          path: /usr/lib/nvidia-418 # TODO make it argument
